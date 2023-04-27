@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kotak Bergambar Berganti</title>
-    <style type="text/css">
-        #square 
-        {
-            width: 700px;
-            height: 500px;
-            margin: 4% 25% 3% 25%;
-            background-size: cover;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="square"></div>
-    <script>
-        setInterval
-        (
-            (function (images) 
-                {
-                    var index = -1, changeImages;
-                    changeImages = function()
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kotak Bergambar Berganti</title>
+        <style type="text/css">
+            #square 
+            {
+                width: 700px;
+                height: 500px;
+                margin: 4% 25% 3% 25%;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="square"></div>
+        <script>
+            setInterval
+            (
+                (function (images) 
                     {
-                        index = (index + 1) % images.length;
-                        document.getElementById('square').style.backgroundImage = 'url(' + images[index] + ')';
-                    };
-                    changeImages();
-                    return changeImages;
-                }
+                        var index = -1, changeImages;
+                        changeImages = function()
+                        {
+                            index = (index + 1) % images.length;
+                            document.getElementById('square').style.backgroundImage = 'url(' + images[index] + ')';
+                        };
+                        changeImages();
+                        return changeImages;
+                    }
 
-                ([
-                    "./images/1.jpeg",
-                    "./images/2.jpeg",
-                    "./images/3.jpeg",
-                    "./images/4.jpeg",
-                    "./images/5.jpeg",
-                ])
-            ),4000
-        );
-    </script>
-</body>
+                    ([
+                        "./images/1.jpeg",
+                        "./images/2.jpeg",
+                        "./images/3.jpeg",
+                        "./images/4.jpeg",
+                        "./images/5.jpeg",
+                    ])
+                ),4000
+            );
+        </script>
+    </body>
 </html>
